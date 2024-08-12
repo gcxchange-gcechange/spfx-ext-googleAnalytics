@@ -2,7 +2,6 @@ import { Log } from '@microsoft/sp-core-library';
 import {
   BaseApplicationCustomizer
 } from '@microsoft/sp-application-base';
-import { Dialog } from '@microsoft/sp-dialog';
 
 import * as strings from 'GoogleAnalyticsApplicationCustomizerStrings';
 
@@ -14,7 +13,6 @@ const LOG_SOURCE: string = 'GoogleAnalyticsApplicationCustomizer';
  * You can define an interface to describe it.
  */
 export interface IGoogleAnalyticsApplicationCustomizerProperties {
-  // This is an example; replace with your own property
   testMessage: string;
   id: string;
 }
@@ -27,18 +25,7 @@ export default class GoogleAnalyticsApplicationCustomizer
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
     
     this.context.application.navigatedEvent.add(this, this.addGoogleTag);
- 
 
-    let message: string = this.properties.testMessage;
-
-    if (!message) {
-      message = '(No properties were provided.)';
-
-    }
-
-    Dialog.alert(`${this.properties.id}`).catch(() => {
-      /* handle error */
-    });
 
     return Promise.resolve();
   }
