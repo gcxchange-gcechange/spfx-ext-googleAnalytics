@@ -4,6 +4,6 @@
         Title="GoogleAnalytics"
         Location="ClientSideExtension.ApplicationCustomizer"
         ClientSideComponentId="c2a95491-c869-4e30-b5a9-b9d5730d5766"
-        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+        ClientSideComponentProperties="{&quot;id&quot;:&quot;id&quot;}">
     </CustomAction>
 </Elements>
