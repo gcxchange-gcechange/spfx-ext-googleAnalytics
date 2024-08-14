@@ -4,6 +4,6 @@
         Title="GoogleAnalytics"
         Location="ClientSideExtension.ApplicationCustomizer"
         ComponentId="c2a95491-c869-4e30-b5a9-b9d5730d5766"
-        Properties="{&quot;id&quot;:&quot;id&quot;}">
+        Properties="{&quot;id&quot;:&quot;&quot;}">
     </ClientSideComponentInstance>
 </Elements>
