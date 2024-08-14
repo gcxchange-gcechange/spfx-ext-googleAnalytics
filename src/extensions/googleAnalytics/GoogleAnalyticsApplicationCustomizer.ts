@@ -25,7 +25,7 @@ export default class GoogleAnalyticsApplicationCustomizer
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
     
     this.context.application.navigatedEvent.add(this, this.addGoogleTag);
-
+    console.log("GOOGLE ANALYTICS EXTENSION")
 
     return Promise.resolve();
   }
@@ -33,8 +33,11 @@ export default class GoogleAnalyticsApplicationCustomizer
   public addGoogleTag ():void {
   
     const scriptTag = document.createElement('script');
+    scriptTag.type = "text/javascript";
     scriptTag.async = true;
     scriptTag.src = `https://www.googletagmanager.com/gtag/js?id=${this.properties.id}`;
+    document.body.insertAdjacentElement("beforeend", scriptTag);
+    
     const scriptContent = document.createElement('script');
     scriptContent.innerHTML = `
      window.dataLayer = window.dataLayer || [];
@@ -42,8 +45,9 @@ export default class GoogleAnalyticsApplicationCustomizer
      gtag('js', new Date());
      gtag('config', '${this.properties.id}');
     `
-   document.head.appendChild(scriptTag);
-   document.head.appendChild(scriptContent);
+    document.body.insertAdjacentElement("beforeend", scriptContent);
+  //  document.head.appendChild(scriptTag);
+  //  document.head.appendChild(scriptContent);
 
   }
 
