@@ -4,18 +4,18 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://devgcx.sharepoint.com/sites/CM-test",
+      "pageUrl": "",
       "customActions": {
         "c2a95491-c869-4e30-b5a9-b9d5730d5766": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "trackingId": "G-BXX4JNE7Q2"
+            "trackingId": ""
           }
         }
       }
     },
     "googleAnalytics": {
-      "pageUrl": "https://devgcx.sharepoint.com/sites/CM-test",
+      "pageUrl": "",
       "customActions": {
         "c2a95491-c869-4e30-b5a9-b9d5730d5766": {
           "location": "ClientSideExtension.ApplicationCustomizer",

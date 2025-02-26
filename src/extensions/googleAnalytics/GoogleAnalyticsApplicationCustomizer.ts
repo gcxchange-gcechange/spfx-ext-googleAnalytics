@@ -30,6 +30,11 @@ export default class GoogleAnalyticsApplicationCustomizer
   }
 
   public addGoogleTag ():void {
+
+
+    console.log("this.properties.trackingId", this.properties.trackingId);
+
+
     const scriptTag = document.createElement('script');
     scriptTag.type = "text/javascript";
     scriptTag.async = true;
