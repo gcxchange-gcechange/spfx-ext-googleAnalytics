@@ -1,0 +1,22 @@
+name: Security-Scan-Frontend
+
+trigger: none
+pr:
+  branches:
+    include:
+      - main
+      - master 
+
+resources:
+  repositories:
+    - repository: pipeline-templates
+      type: github
+      name: gcxchange-gcechange/security-pipeline
+      ref: refs/heads/master
+      endpoint: 'GCExchange (3)'
+
+pool:
+  vmImage: ubuntu-latest
+
+extends:
+  template: frontend-template.yml@pipeline-templates
